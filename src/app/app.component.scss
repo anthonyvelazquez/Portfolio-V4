@@ -1,0 +1,119 @@
+.container {
+
+}
+
+.header {
+  //TODO make this variable global
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5rem;
+  height: 10rem;
+  background-color: #0A192F;
+  //box-shadow: rgba(2, 12, 27, 0.7) 0px 10px 30px -10px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 30;
+}
+
+.navbar {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .brand {
+
+  }
+
+  &--left, &--middle, &--right {
+    display: flex;
+    align-items: center;
+  }
+
+  .navbar-links {
+    display: flex;
+    align-items: center;
+    counter-reset: item;
+
+    li {
+      font-size: 1.4rem;
+      margin: 0 1rem;
+      counter-increment: item;
+
+      &:before {
+        content: "0" counter(item) ".";
+        color: #209cee;
+      }
+    }
+
+    a {
+      padding: 1.2rem 1rem;
+
+      &:hover {
+        color: #209cee;
+      }
+    }
+  }
+
+  .resume-button {
+    margin-left: 1rem;
+    font-size: 1.4rem;
+  }
+}
+
+.main-container {
+  width: 100%;
+  padding: 0 15rem;
+}
+
+.banner {
+  min-height: 100vh;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 15rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+
+  h1 {
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+    font-weight: normal;
+    color: #209cee;
+  }
+
+  h2 {
+    font-family: "Calibre Semibold", serif;
+    font-size: 8rem;
+    font-weight: 600;
+    color: rgb(230, 241, 255);
+  }
+
+  h3 {
+    font-family: "Calibre Semibold", serif;
+    font-size: 8rem;
+    font-weight: 600;
+    color: rgb(136, 146, 176);
+  }
+
+  .summary {
+    margin-top: 2.5rem;
+    max-width: 50rem;
+    font-family: "Calibre Regular", serif;
+    color: #8892b0;
+
+    p {
+      font-size: 2rem;
+    }
+  }
+
+  .buttons {
+    a {
+      font-size: 1.4rem;
+      margin-top: 5rem;
+      padding: 2rem 2.8rem;
+    }
+  }
+}

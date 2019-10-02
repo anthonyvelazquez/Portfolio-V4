@@ -1,0 +1,164 @@
+@font-face {
+  font-family: 'Calibre Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Calibre Regular'), url('./assets/CalibreRegular.woff') format('woff');
+}
+
+
+@font-face {
+  font-family: 'Calibre Regular Italic';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Calibre Regular Italic'), url('./assets/CalibreRegularItalic.woff') format('woff');
+}
+
+
+@font-face {
+  font-family: 'Calibre Thin';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Calibre Thin'), url('./assets/CalibreThin.woff') format('woff');
+}
+
+
+@font-face {
+  font-family: 'Calibre Thin Italic';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Calibre Thin Italic'), url('./assets/CalibreThinItalic.woff') format('woff');
+}
+
+
+@font-face {
+  font-family: 'Calibre Light';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Calibre Light'), url('./assets/CalibreLight.woff') format('woff');
+}
+
+
+@font-face {
+  font-family: 'Calibre Light Italic';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Calibre Light Italic'), url('./assets/CalibreLightItalic.woff') format('woff');
+}
+
+
+@font-face {
+  font-family: 'Calibre Medium';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Calibre Medium'), url('./assets/CalibreMedium.woff') format('woff');
+}
+
+
+@font-face {
+  font-family: 'Calibre Medium Italic';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Calibre Medium Italic'), url('./assets/CalibreMediumItalic.woff') format('woff');
+}
+
+
+@font-face {
+  font-family: 'Calibre Semibold';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Calibre Semibold'), url('./assets/CalibreSemibold.woff') format('woff');
+}
+
+
+@font-face {
+  font-family: 'Calibre Semibold Italic';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Calibre Semibold Italic'), url('./assets/CalibreSemiboldItalic.woff') format('woff');
+}
+
+
+@font-face {
+  font-family: 'Calibre Bold';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Calibre Bold'), url('./assets/CalibreBold.woff') format('woff');
+}
+
+
+@font-face {
+  font-family: 'Calibre Bold Italic';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Calibre Bold Italic'), url('./assets/CalibreBoldItalic.woff') format('woff');
+}
+
+
+@font-face {
+  font-family: 'Calibre Black';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Calibre Black'), url('./assets/CalibreBlack.woff') format('woff');
+}
+
+
+@font-face {
+  font-family: 'Calibre Black Italic';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Calibre Black Italic'), url('./assets/CalibreBlackItalic.woff') format('woff');
+}
+
+  *, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+html {
+  font-family: 'Fira Code', 'Fira Mono', 'Roboto Mono', sans-serif;
+  font-size: 62.5%;
+  color: #ccd6f6;
+  background-color: #0A192F;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.button {
+  background-color: #fff;
+  color: #363636;
+  cursor: pointer;
+  justify-content: center;
+  padding: .8rem 1.2rem;
+  text-align: center;
+  white-space: nowrap;
+  align-items: center;
+  border: 1px solid transparent;
+  border-color: #dbdbdb;
+  border-width: 1px;
+  border-radius: 4px;
+  box-shadow: none;
+  display: inline-flex;
+
+  &--blue-outline {
+    background-color: transparent;
+    border-color: #209cee;
+    color: #209cee;
+
+    &:hover {
+      background-color: #209cee;
+      border-color: #209cee;
+      color: #fff;
+    }
+  }
+}
