@@ -3,117 +3,184 @@
 }
 
 .header {
-  //TODO make this variable global
+  //TODO make this variable global padding 0 5rem
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 5rem;
-  height: 10rem;
+  padding: 0 50px;
+  height: 100px;
   background-color: #0A192F;
   //box-shadow: rgba(2, 12, 27, 0.7) 0px 10px 30px -10px;
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 30;
+
+  .navbar {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .brand {
+
+    }
+
+    &--left, &--middle, &--right {
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar-links {
+      display: flex;
+      align-items: center;
+      counter-reset: item;
+
+      li {
+        font-size: 1.4rem;
+        margin: 0 1rem;
+        counter-increment: item;
+
+        &:before {
+          content: "0" counter(item) ".";
+          color: #209cee;
+        }
+      }
+
+      a {
+        padding: 1.2rem 1rem;
+
+        &:hover {
+          color: #209cee;
+        }
+      }
+    }
+
+    .resume-button {
+      margin-left: 1rem;
+      font-size: 1.4rem;
+    }
+  }
 }
 
-.navbar {
-  flex: 1;
+.social-container {
+  position: fixed;
+  bottom: 0;
+  left: 40px;
+  width: 40px;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 
-  .brand {
-
-  }
-
-  &--left, &--middle, &--right {
+  ul {
     display: flex;
+    flex-direction: column;
     align-items: center;
-  }
-
-  .navbar-links {
-    display: flex;
-    align-items: center;
-    counter-reset: item;
 
     li {
-      font-size: 1.4rem;
-      margin: 0 1rem;
-      counter-increment: item;
+      a {
+        display: block;
+        padding: 1rem;
 
-      &:before {
-        content: "0" counter(item) ".";
-        color: #209cee;
+        svg {
+          width: 18px;
+          height: 18px;
+          fill: currentColor;
+        }
       }
     }
 
-    a {
-      padding: 1.2rem 1rem;
-
-      &:hover {
-        color: #209cee;
-      }
+    &::after {
+      content: '';
+      background-color: #8892b0;
+      width: 1px;
+      height: 90px;
+      display: block;
+      margin-top: .8rem;
     }
   }
+}
 
-  .resume-button {
-    margin-left: 1rem;
-    font-size: 1.4rem;
+.email-container {
+  position: fixed;
+  bottom: 0;
+  right: 40px;
+  width: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  a {
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    letter-spacing: .5px;
+    writing-mode: vertical-rl;
+
+    &::after {
+      content: '';
+      background-color: #8892b0;
+      width: 1px;
+      height: 90px;
+      display: block;
+      margin-top: .8rem;
+    }
   }
 }
 
 .main-container {
   width: 100%;
   padding: 0 15rem;
-}
 
-.banner {
-  min-height: 100vh;
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 15rem 0;
-  display: flex;
-  align-items: center;
-  justify-content: start;
-
-  h1 {
-    font-size: 1.6rem;
-    margin-bottom: 2rem;
-    font-weight: normal;
-    color: #209cee;
+  section {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 15rem 0;
   }
 
-  h2 {
-    font-family: "Calibre Semibold", serif;
-    font-size: 8rem;
-    font-weight: 600;
-    color: rgb(230, 241, 255);
-  }
+  .banner {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: start;
 
-  h3 {
-    font-family: "Calibre Semibold", serif;
-    font-size: 8rem;
-    font-weight: 600;
-    color: rgb(136, 146, 176);
-  }
-
-  .summary {
-    margin-top: 2.5rem;
-    max-width: 50rem;
-    font-family: "Calibre Regular", serif;
-    color: #8892b0;
-
-    p {
-      font-size: 2rem;
+    h1 {
+      font-size: 1.6rem;
+      margin-bottom: 2rem;
+      font-weight: normal;
+      color: #209cee;
     }
-  }
 
-  .buttons {
-    a {
-      font-size: 1.4rem;
-      margin-top: 5rem;
-      padding: 2rem 2.8rem;
+    h2 {
+      font-family: "Calibre Semibold", serif;
+      font-size: 8rem;
+      font-weight: 600;
+      color: #e6f1ff;
+    }
+
+    h3 {
+      font-family: "Calibre Semibold", serif;
+      font-size: 8rem;
+      font-weight: 600;
+      color: #8892b0;
+    }
+
+    .summary {
+      margin-top: 2.5rem;
+      max-width: 50rem;
+      font-family: "Calibre Regular", serif;
+      color: #8892b0;
+
+      p {
+        font-size: 2rem;
+      }
+    }
+
+    .buttons {
+      a {
+        font-size: 1.4rem;
+        margin-top: 5rem;
+        padding: 2rem 2.8rem;
+      }
     }
   }
 }
