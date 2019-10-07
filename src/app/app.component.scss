@@ -217,7 +217,7 @@
     display: block;
     width: 30rem;
     height: 1px;
-    background-color: rgba(45, 57, 82, 1);
+    background-color: #2d3952;
     margin-left: 2rem;
   }
 }
@@ -296,9 +296,8 @@
     padding: 0 2rem;
     white-space: nowrap;
     border: none;
-    //color: rgb(100, 255, 218);
-    color: rgb(96, 106, 134);
-    border-left: 2px solid rgb(51, 63, 88);
+    color: #606a86;
+    border-left: 2px solid #333f58;
     height: 4.2rem;
     cursor: pointer;
     transition: all .15s ease-in;
@@ -306,7 +305,7 @@
 
     &:hover {
       color: #209cee;
-      background-color: rgb(23, 42, 69);
+      background-color: #172a45;
     }
 
     &.active {
@@ -321,7 +320,7 @@
 
     .title {
       font-family: "Calibre Semibold", serif;
-      color: rgb(204, 214, 246);
+      color: #ccd6f6;
       font-size: 2.2rem;
       margin-bottom: 5px;
       font-weight: 500;
@@ -334,7 +333,7 @@
     .timeline {
       font-size: 1.4rem;
       letter-spacing: .5px;
-      color: rgb(168, 178, 209);
+      color: #a8b2d1;
       margin-bottom: 3rem;
       font-weight: 500;
     }
@@ -346,7 +345,7 @@
         margin-bottom: 1rem;
         padding-left: 3rem;
         font-size: 1.8rem;
-        color: rgb(168, 178, 209);
+        color: #a8b2d1;
         font-family: "Calibre Regular", serif;
         position: relative;
 
@@ -417,31 +416,42 @@
   .details {
     grid-row: 1 / -1;
 
-    h4 {
+    .featured {
       font-size: 1.4rem;
       margin: 1rem 0;
       font-weight: normal;
+      color: #209cee;
     }
 
-    h5 {
+    .project-title {
       font-size: 2.8rem;
       font-weight: 600;
       font-family: "Calibre Semibold", serif;
-      color: rgb(204, 214, 246);
+      color: #ccd6f6;
       margin-bottom: 2rem;
+      transition: all .15s ease-in-out;
+
+      &:hover {
+        color: #209cee;
+      }
     }
 
     .snippet {
-      box-shadow: rgba(2, 12, 27, 0.7) 0px 10px 30px -15px;
+      box-shadow: rgb(2, 12, 27, 0.7) 0px 10px 30px -15px;
       font-size: 1.8rem;
       font-family: "Calibre Regular", serif;
-      background-color: rgb(23, 42, 69);
-      color: rgb(168, 178, 209);
+      background-color: #172a45;
+      color: #a8b2d1;
       padding: 2.5rem;
       border-radius: 4px;
+      transition: all .15s ease-in-out;
 
       &:hover {
         box-shadow: rgba(2, 12, 27, 0.7) 0px 20px 30px -15px;
+      }
+
+      .link {
+        color: #209cee;
       }
     }
 
@@ -449,8 +459,8 @@
       display: flex;
       margin: 2.5rem 0 1rem 0;
 
-      li {
-        color: rgb(136, 146, 176);
+      .language {
+        color: #8892b0;
         font-size: 1.4rem;
 
         &:not(:first-child) {
@@ -462,8 +472,13 @@
     .links {
       margin-top: 2rem;
 
-      a {
+      .link {
         padding: 1rem;
+        transition: all .15s ease-in-out;
+
+        &:hover {
+          color: #209cee;
+        }
       }
 
       a:not(:first-child) {
@@ -489,13 +504,14 @@
   }
 
   .project-container {
-    background-color: rgb(23, 42, 69);
+    background-color: #172a45;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding: 3.2rem 2.8rem;
     box-shadow: rgba(2, 12, 27, 0.7) 0px 10px 30px -15px;
+    transition: all .15s ease-in-out;
 
     &:hover {
       transform: translateY(-5px);
@@ -512,7 +528,7 @@
       margin-bottom: 3rem;
 
       .folder {
-        color:  rgb(100, 255, 218);;
+        color: #209cee;
 
         svg {
           height: 4rem;
@@ -523,17 +539,22 @@
 
       .links {
 
-        a {
+        .link {
           padding: 1rem;
+          transition: all .15s ease-in-out;
+
+          &:hover {
+            color: #209cee;
+          }
         }
 
-        a:not(:first-child) {
+        .link:not(:first-child) {
           margin-left: 2rem;
         }
 
         svg {
-          width: 2.4rem;
-          height: 2.4rem;
+          width: 2rem;
+          height: 2rem;
           fill: currentColor;
         }
       }
@@ -541,7 +562,7 @@
 
     .title {
       font-size: 2.2rem;
-      color: rgb(204, 214, 246);
+      color: #ccd6f6;
       margin-bottom: 1rem;
       font-weight: 600;
       font-family: "Calibre Semibold", serif;
@@ -549,20 +570,20 @@
 
     .description {
       font-size: 18px;
-      color: rgb(168, 178, 209);
+      color: #a8b2d1;
       font-family: "Calibre Regular", serif;
     }
   }
 
   .footer {
 
-    ul {
+    .language-list {
       margin-top: 2rem;
       display: flex;
 
-      li {
+      .language {
         font-size: 12px;
-        color: rgb(136, 146, 176);
+        color: #8892b0;
 
         &:not(:first-child) {
         margin-left: 2rem;
@@ -577,7 +598,7 @@
     align-items: center;
     margin-top: 10rem;
 
-    a {
+    .more-button {
       font-size: 1.4rem;
       padding: 2rem 2.8rem;
     }
@@ -587,13 +608,13 @@
 .contact {
   max-width: 60rem;
 
-  p {
+  .message {
     font-family: "Calibre Regular", serif;
     font-size: 2rem;
     margin-bottom: 1.5rem;
   }
 
-  a {
+  .contact-button {
     margin-top: 5rem;
     font-size: 1.4rem;
     padding: 2rem 2.8rem;
