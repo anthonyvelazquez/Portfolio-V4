@@ -36,7 +36,7 @@
       align-items: center;
       counter-reset: item;
 
-      li {
+      .item {
         font-size: 1.4rem;
         margin: 0 1rem;
         counter-increment: item;
@@ -47,8 +47,9 @@
         }
       }
 
-      a {
+      .item-link {
         padding: 1.2rem 1rem;
+        transition: all .15s ease-in-out;
 
         &:hover {
           color: #209cee;
@@ -71,15 +72,21 @@
   display: flex;
   justify-content: center;
 
-  ul {
+  .social-links {
     display: flex;
     flex-direction: column;
     align-items: center;
 
-    li {
-      a {
+    .item {
+
+      .item-link {
         display: block;
         padding: 1rem;
+        transition: all .15s ease-in-out;
+
+        &:hover {
+          color: #209cee;
+        }
 
         svg {
           width: 18px;
@@ -109,12 +116,17 @@
   flex-direction: column;
   align-items: center;
 
-  a {
+  .email-link {
     display: flex;
     align-items: center;
     font-size: 1.2rem;
     letter-spacing: .5px;
     writing-mode: vertical-rl;
+    transition: all .15s ease-in-out;
+
+    &:hover {
+      color: #209cee;
+    }
 
     &::after {
       content: '';
@@ -145,21 +157,21 @@
   align-items: center;
   justify-content: start;
 
-  h1 {
+  .hello-message {
     font-size: 1.6rem;
     margin-bottom: 2rem;
     font-weight: normal;
     color: #209cee;
   }
 
-  h2 {
+  .name {
     font-family: "Calibre Semibold", serif;
     font-size: 8rem;
     font-weight: 600;
     color: #e6f1ff;
   }
 
-  h3 {
+  .sub-message {
     font-family: "Calibre Semibold", serif;
     font-size: 8rem;
     font-weight: 600;
@@ -178,7 +190,7 @@
   }
 
   .buttons {
-    a {
+    .email-link {
       font-size: 1.4rem;
       margin-top: 5rem;
       padding: 2rem 2.8rem;
@@ -235,48 +247,71 @@
     justify-content: center;
   }
 
-  p {
+  .details {
     font-size: 2rem;
     font-family: "Calibre Regular", serif;
     line-height: 2.6rem;
     margin-bottom: 2rem;
+
+    .link {
+      color: #209cee;
+    }
   }
 
-  ul {
+  .skill-list {
     margin-top: 2rem;
     display: grid;
     grid-template-columns: repeat(2 , minmax(14rem, 20rem));
     font-size: 1.4rem;
 
-    li {
+    .skill {
       margin-bottom: 1rem;
+      position: relative;
+      padding-left: 2rem;
+
+      &:before {
+        content: '▹';
+        position: absolute;
+        left: 0;
+        color: #209cee;
+        font-size: 1.4rem;
+        //line-height: 12px;
+      }
     }
   }
 }
 
 .experience {
-  max-width: 70rem;
+  max-width: 80rem;
 
   .container {
     display: flex;
   }
 
-  button {
+  .location-button {
     display: flex;
     align-items: center;
     background-color: transparent;
     font-size: 1.4rem;
     padding: 0 2rem;
     white-space: nowrap;
-    border: 1px solid transparent;
+    border: none;
     //color: rgb(100, 255, 218);
     color: rgb(96, 106, 134);
     border-left: 2px solid rgb(51, 63, 88);
     height: 4.2rem;
+    cursor: pointer;
+    transition: all .15s ease-in;
+    width: 100%;
 
     &:hover {
-      color: rgb(100, 255, 218);
+      color: #209cee;
       background-color: rgb(23, 42, 69);
+    }
+
+    &.active {
+      border-left: 2px solid #209cee;
+      color: #209cee;
     }
   }
 
@@ -292,22 +327,37 @@
       font-weight: 500;
     }
 
+    .link {
+      color: #209cee;
+    }
+
     .timeline {
       font-size: 1.4rem;
       letter-spacing: .5px;
       color: rgb(168, 178, 209);
       margin-bottom: 3rem;
+      font-weight: 500;
     }
 
-    ul {
-      font-size: 1.8rem;
+    .detail-list {
+      font-size: 1.6rem;
 
-      li {
+      .detail {
         margin-bottom: 1rem;
         padding-left: 3rem;
         font-size: 1.8rem;
         color: rgb(168, 178, 209);
         font-family: "Calibre Regular", serif;
+        position: relative;
+
+        &:before {
+          content: '▹';
+          position: absolute;
+          left: 0;
+          color: #209cee;
+          font-size: 1.8rem;
+          //line-height: 12px;
+        }
       }
     }
   }
