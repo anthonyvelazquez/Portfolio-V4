@@ -122,7 +122,9 @@ html {
   font-family: 'Fira Code', 'Fira Mono', 'Roboto Mono', sans-serif;
   font-size: 62.5%;
   color: #ccd6f6;
-  background-color: #0A192F;
+  // background-color: #0A192F;
+  background-color: #fff;
+  transition: background-color .2s cubic-bezier(.39,.575,.565,1);
 }
 
 body {
