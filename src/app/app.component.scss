@@ -361,7 +361,8 @@
     white-space: nowrap;
     border: none;
     color: #606a86;
-    border-left: 2px solid #333f58;
+    // border-left: 2px solid #333f58;
+    border-left: 2px solid #1a202c;
     height: 4.2rem;
     cursor: pointer;
     transition: all .15s ease-in;
@@ -384,20 +385,27 @@
 
     .title {
       font-family: "Calibre Semibold", serif;
-      color: #ccd6f6;
+      // color: #ccd6f6;
+      color: #1a202c;
       font-size: 2.2rem;
       margin-bottom: 5px;
       font-weight: 500;
     }
 
     .link {
-      color: #209cee;
+      // color: #209cee;
+      color: #0b69a3;
+
+      &:hover {
+        color: #209cee;
+      }
     }
 
     .timeline {
       font-size: 1.4rem;
       letter-spacing: .5px;
-      color: #a8b2d1;
+      // color: #a8b2d1;
+      color: #0b69a3;
       margin-bottom: 3rem;
       font-weight: 500;
     }
@@ -409,7 +417,8 @@
         margin-bottom: 1rem;
         padding-left: 3rem;
         font-size: 1.8rem;
-        color: #a8b2d1;
+        // color: #a8b2d1;
+        color: #1a202c;
         font-family: "Calibre Regular", serif;
         position: relative;
 
@@ -417,7 +426,8 @@
           content: '▹';
           position: absolute;
           left: 0;
-          color: #209cee;
+          // color: #209cee;
+          color: #0b69a3;
           font-size: 1.8rem;
           //line-height: 12px;
         }
