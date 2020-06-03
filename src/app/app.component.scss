@@ -1,7 +1,3 @@
-.container {
-
-}
-
 .header {
   //TODO make this variable global padding 0 5rem
   display: flex;
@@ -162,7 +158,7 @@
   min-height: 100vh;
   display: flex;
   align-items: center;
-  justify-content: start;
+  justify-content: flex-start;
 
   .content {
     z-index: 100;
@@ -172,28 +168,32 @@
     font-size: 1.6rem;
     margin-bottom: 2rem;
     font-weight: normal;
-    color: #209cee;
+    // color: #209cee;
+    color: #0b69a3;
   }
 
   .name {
     font-family: "Calibre Semibold", serif;
     font-size: 8rem;
     font-weight: 600;
-    color: #e6f1ff;
+    // color: #e6f1ff;
+    color: #1a202c;
   }
 
   .sub-message {
     font-family: "Calibre Semibold", serif;
     font-size: 8rem;
     font-weight: 600;
-    color: #8892b0;
+    // color: #8892b0;
+    color: #0b69a3;
   }
 
   .summary {
     margin-top: 2.5rem;
     max-width: 50rem;
     font-family: "Calibre Regular", serif;
-    color: #8892b0;
+    // color: #8892b0;
+    color: #1a202c;
 
     p {
       font-size: 2rem;
@@ -247,13 +247,20 @@
   margin: 1rem 0 4rem 0;
 }
 
+.divider {
+  height: 1px;
+  width: 100%;
+  background-color: #2d3952;
+}
+
 .about {
   max-width: 100rem;
 
   .container {
     display: flex;
     justify-content: space-between;
-    color: #8892b0;
+    // color: #8892b0;
+    color: #1a202c;
   }
 
   .content {
@@ -273,7 +280,12 @@
     margin-bottom: 2rem;
 
     .link {
-      color: #209cee;
+      // color: #209cee;
+      color: #0b69a3;
+
+      &:hover {
+        color: #209cee;
+      }
     }
   }
 
