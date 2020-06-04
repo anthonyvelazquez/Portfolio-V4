@@ -110,7 +110,7 @@ export class AppComponent implements OnInit {
       github: 'https://github.com/anthonyvelazquez/GroupMeDownloader',
       website: 'https://avelazquez-groupme-downloader.netlify.app/',
       image: '',
-      languages: ['Angular 2+', 'HTML', 'CSS', 'GroupMe REST API'],
+      languages: ['Angular 2+', 'HTML', 'CSS', 'GroupMe API'],
       viewable: true
     });
     this.otherProjectList.push({
