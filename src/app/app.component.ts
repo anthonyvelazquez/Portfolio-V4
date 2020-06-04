@@ -103,6 +103,33 @@ export class AppComponent implements OnInit {
       image: '',
       languages: ['Python', 'PyGame'],
       viewable: false
+    });
+    this.otherProjectList.push({
+      name: 'GroupMe Gallery Downloader',
+      description: 'Web app that allows you to load and download gallery photos from a GroupMe group chat. Built using GroupMe REST API',
+      github: 'https://github.com/anthonyvelazquez/GroupMeDownloader',
+      website: 'https://avelazquez-groupme-downloader.netlify.app/',
+      image: '',
+      languages: ['Angular 2+', 'HTML', 'CSS', 'GroupMe REST API'],
+      viewable: true
+    });
+    this.otherProjectList.push({
+      name: 'DJ Rooms',
+      description: 'Web app that allows users to create a room where other users can join and listen to music the room creator has queued up',
+      github: 'https://github.com/anthonyvelazquez/Dj-Rooms',
+      website: 'https://avelazquez-dj-rooms.netlify.app/',
+      image: '',
+      languages: ['Angular 2+', 'HTML', 'CSS', 'Spotify API'],
+      viewable: true
+    });
+    this.otherProjectList.push({
+      name: 'Mena - Portfolio',
+      description: 'Very basic website for a portfolio page that was requested by a colleague. No Javascript and very basic CSS were part of the requirements',
+      github: 'https://github.com/anthonyvelazquez/Paid_Work_1',
+      website: 'https://mena.netlify.app/',
+      image: '',
+      languages: ['HTML', 'CSS'],
+      viewable: true
     })
   }
 

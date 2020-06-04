@@ -152,16 +152,22 @@ a {
   border-radius: 4px;
   box-shadow: none;
   display: inline-flex;
+  transition: all .15s ease-in-out;
 
   &--blue-outline {
     background-color: transparent;
-    border-color: #209cee;
-    color: #209cee;
+    // border-color: #209cee;
+    border-color: #1a202c;
+    // color: #209cee;
+    color: #1a202c;
 
     &:hover {
-      background-color: #209cee;
-      border-color: #209cee;
-      color: #fff;
+      // background-color: #209cee;
+      background-color: #1a202c;
+      // border-color: #209cee;
+      border-color: #1a202c;
+      // color: #fff;
+      color: #a8b2d1;
     }
   }
 }
