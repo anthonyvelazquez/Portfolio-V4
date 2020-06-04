@@ -9,6 +9,16 @@ interface Job {
   details: Array<string>;
 }
 
+interface Project {
+  name: string;
+  description: string;
+  github: string;
+  website: string;
+  image: string;
+  languages: Array<string>;
+  viewable: boolean;
+}
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -16,11 +26,84 @@ interface Job {
 })
 export class AppComponent implements OnInit {
   jobList: Array<Job> = [];
+  featuredProjectList: Array<Project> = [];
+  otherProjectList: Array<Project> = [];
   selectedJob: Job = null;
 
   ngOnInit(): void {
     this.importJobs();
+    this.importFeaturedProjects();
+    this.importOtherProjects();
     this.selectedJob = this.jobList[0];
+  }
+
+  importFeaturedProjects(): void {
+    this.featuredProjectList.push({
+      name: 'Trillo Sample Website',
+      description: 'Barebone proof of concept for a hotel website. ',
+      github: 'https://github.com/anthonyvelazquez/Trillo',
+      website: 'https://avelazquez-trillo.netlify.app/',
+      image: 'https://via.placeholder.com/1920x1080',
+      languages: ['Angular 2+', 'HTML5', 'SCSS'],
+      viewable: true
+    });
+    this.featuredProjectList.push({
+      name: 'Nexter Sample Website',
+      description: 'Barebone proof of concept for a realtor website. ',
+      github: 'https://github.com/anthonyvelazquez/Nexter',
+      website: 'https://avelazquez-nexter.netlify.app/',
+      image: 'https://via.placeholder.com/1920x1080',
+      languages: ['HTML5', 'CSS'],
+      viewable: true
+    });
+    this.featuredProjectList.push({
+      name: 'Natour Sample Website',
+      description: 'Barebone proof of concept for a outdoor website. ',
+      github: 'https://github.com/anthonyvelazquez/Natour',
+      website: 'https://avelazquez-natour.netlify.app/',
+      image: 'https://via.placeholder.com/1920x1080',
+      languages: ['Angular 2+', 'HTML5', 'SCSS'],
+      viewable: true
+    });
+  }
+
+  importOtherProjects(): void {
+    this.otherProjectList.push({
+      name: 'Trillo Sample Website',
+      description: 'Barebone proof of concept for a hotel website. Created through the assistance Udemy course',
+      github: 'https://github.com/anthonyvelazquez/Trillo',
+      website: 'https://avelazquez-trillo.netlify.app/',
+      image: '',
+      languages: ['Angular 2+', 'HTML5', 'SCSS'],
+      viewable: true
+    });
+    this.otherProjectList.push({
+      name: 'Nexter Sample Website',
+      description: 'Barebone proof of concept for a realtor website. Created through the assistance Udemy course',
+      github: 'https://github.com/anthonyvelazquez/Nexter',
+      website: 'https://avelazquez-nexter.netlify.app/',
+      image: '',
+      languages: ['HTML5', 'CSS'],
+      viewable: true
+    });
+    this.otherProjectList.push({
+      name: 'Natour Sample Website',
+      description: 'Barebone proof of concept for a outdoor website. Created through the assistance Udemy course',
+      github: 'https://github.com/anthonyvelazquez/Natour',
+      website: 'https://avelazquez-natour.netlify.app/',
+      image: '',
+      languages: ['Angular 2+', 'HTML5', 'SCSS'],
+      viewable: true
+    });
+    this.otherProjectList.push({
+      name: 'Python Snake Clone',
+      description: 'Basic Python Snake Game Clone made with PyGame',
+      github: 'https://github.com/anthonyvelazquez/SimpleSnake',
+      website: '',
+      image: '',
+      languages: ['Python', 'PyGame'],
+      viewable: false
+    })
   }
 
   importJobs(): void {
