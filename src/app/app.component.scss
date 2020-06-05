@@ -804,6 +804,48 @@
   }
 }
 
+.footer {
+
+  .social-footer-links {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 5rem;
+  
+    .item {
+  
+      .item-link {
+        display: block;
+        padding: 1rem;
+        transition: all .15s ease-in-out;
+        color: #035388;
+  
+        &:hover {
+          color: #209cee;
+        }
+  
+        svg {
+          width: 18px;
+          height: 18px;
+          fill: currentColor;
+        }
+      }
+    }
+  }
+
+  .project-links {
+    display: block;
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    color: #035388;
+    transition: all .15s ease-in-out;
+
+    &:hover {
+      color: #209cee;
+    }
+  }
+}
+
 @media (min-width: 425px) {
   .banner {
   
@@ -1002,6 +1044,13 @@
     .profile {
       display: block;
       max-height: calc(100vh - 100px);
+    }
+  }
+
+  .footer {
+
+    .social-footer-links {
+      display: none;
     }
   }
 }
