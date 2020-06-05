@@ -30,12 +30,12 @@
           </button>
         </div>
         <div class="mobile-view">
-          <button (click)="displayMobileDropdown = !displayMobileDropdown"><i *ngIf="!displayMobileDropdown" class="fas fa-fw fa-2x fa-bars"></i><i *ngIf="displayMobileDropdown" class="fas fa-fw fa-2x fa-times"></i></button>
+          <button (click)="toggleMenu()"><i #toggle class="fas fa-fw fa-2x" [ngClass]="{'fa-bars': !displayMobileDropdown, 'fa-times': displayMobileDropdown}"></i></button>
         </div>
       </div>
     </nav>
   </header>
-  <ol class="mobile-links" *ngIf="displayMobileDropdown">
+  <ol class="mobile-links" #menu *ngIf="displayMobileDropdown">
     <li class="item">
       <a class="item-link" (click)="scrollToSection('about')"><i class="fas fa-fw fa-user"></i>About</a>
     </li>

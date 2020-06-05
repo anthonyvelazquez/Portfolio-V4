@@ -1,4 +1,4 @@
-import { Component, OnInit, HostListener } from '@angular/core';
+import { Component, OnInit, HostListener, ViewChild, ElementRef, Renderer2 } from '@angular/core';
 
 interface Job {
   active: boolean;
@@ -33,16 +33,36 @@ export class AppComponent implements OnInit {
   scrolledDown = true;
   displayMobileDropdown = false;
 
+  @ViewChild('menu', {static: false}) menu: ElementRef;
+  @ViewChild('toggle', {static: false}) toggleButton: ElementRef;
+
   @HostListener("window:scroll", [])
   onWindowScroll() {
     let newScrollValue = window.pageYOffset || document.documentElement.scrollTop;
     // console.log(`Old: ${this.lastScrollValue} --- New: ${newScrollValue}`);
-    // if the user scrolls down the navbar shadow disappears by setting this.scrolledDown to true
-    if (newScrollValue > this.lastScrollValue) this.scrolledDown = true;
-    // if the user is at the top of the page, also disable the shadow
-    else if (newScrollValue == 0) this.scrolledDown = true;
+    // if the user scrolls down the navbar shadow disappears by setting this.scrolledDown to true. This is also triggers if they scroll all the way to the top
+    if (newScrollValue > this.lastScrollValue || newScrollValue == 0) this.scrolledDown = true;
     else this.scrolledDown = false;
     this.lastScrollValue = newScrollValue;
+  }
+
+  constructor(private renderer: Renderer2) {
+    // listen to clicks to decide if mobile menu needs to be closed
+    this.renderer.listen('window', 'click', (event: Event) => {
+      // console.log(`Mobile Menu Status: ${this.displayMobileDropdown}`);
+      // console.log(`Event Target: ${event.target}`, event.target);
+      // console.log(`Menu Target: ${this.menu.nativeElement}`, this.menu.nativeElement);
+      // console.log(`Button Target: ${this.toggleButton.nativeElement}`, this.toggleButton.nativeElement);
+      // only bother checking if the mobile menu is open and the target isnt the menu itself nor the menu toggle button
+      if (this.displayMobileDropdown && event.target !== this.menu.nativeElement && event.target !== this.toggleButton.nativeElement) {
+        console.log('Mobile Menu: Closing');
+        this.displayMobileDropdown = false;
+      }
+    });
+  }
+
+  toggleMenu() {
+    this.displayMobileDropdown = !this.displayMobileDropdown;
   }
 
   ngOnInit(): void {
