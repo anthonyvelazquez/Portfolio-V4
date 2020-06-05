@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 
 interface Job {
   active: boolean;
@@ -29,8 +29,24 @@ export class AppComponent implements OnInit {
   featuredProjectList: Array<Project> = [];
   otherProjectList: Array<Project> = [];
   selectedJob: Job = null;
+  lastScrollValue = 0;
+  scrolledDown = true;
+  displayMobileDropdown = false;
+
+  @HostListener("window:scroll", [])
+  onWindowScroll() {
+    let newScrollValue = window.pageYOffset || document.documentElement.scrollTop;
+    // console.log(`Old: ${this.lastScrollValue} --- New: ${newScrollValue}`);
+    // if the user scrolls down the navbar shadow disappears by setting this.scrolledDown to true
+    if (newScrollValue > this.lastScrollValue) this.scrolledDown = true;
+    // if the user is at the top of the page, also disable the shadow
+    else if (newScrollValue == 0) this.scrolledDown = true;
+    else this.scrolledDown = false;
+    this.lastScrollValue = newScrollValue;
+  }
 
   ngOnInit(): void {
+    this.lastScrollValue = window.pageYOffset || document.documentElement.scrollTop;
     this.importJobs();
     this.importFeaturedProjects();
     this.importOtherProjects();
@@ -180,5 +196,11 @@ export class AppComponent implements OnInit {
     this.jobList.forEach((job) => job.active = false);
     this.selectedJob = newJob;
     this.selectedJob.active = true;
+  }
+
+  scrollToSection(idName): void {
+    this.displayMobileDropdown = false;
+    let element = document.getElementById(idName);
+    element.scrollIntoView();
   }
 }
