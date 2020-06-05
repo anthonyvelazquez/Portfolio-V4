@@ -55,7 +55,7 @@ export class AppComponent implements OnInit {
       // console.log(`Button Target: ${this.toggleButton.nativeElement}`, this.toggleButton.nativeElement);
       // only bother checking if the mobile menu is open and the target isnt the menu itself nor the menu toggle button
       if (this.displayMobileDropdown && event.target !== this.menu.nativeElement && event.target !== this.toggleButton.nativeElement) {
-        console.log('Mobile Menu: Closing');
+        // console.log('Mobile Menu: Closing');
         this.displayMobileDropdown = false;
       }
     });

@@ -263,19 +263,22 @@
   }
 
   .buttons {
+
     .email-link {
+      max-width: 115px;
       font-size: 1.4rem;
-      margin-top: 5rem;
+      margin-top: 2rem;
       padding: 2rem 2.8rem;
     }
   }
 
   .profile {
-    display: none;
     position: absolute;
     bottom: 0;
     right: 0;
     z-index: 10;
+    max-height: 40rem;
+
   }
 }
 
@@ -311,7 +314,6 @@
 }
 
 .divider {
-  display: none;
   height: 1px;
   width: 100%;
   background-color: #2d3952;
@@ -812,6 +814,17 @@
     .name, .sub-message {
       font-size: 4.5rem;
     }
+
+    .buttons {
+
+      .email-link {
+        max-width: 100%;
+      }
+    }
+
+    .profile {
+      max-height: 38rem;
+    }
   }
 
   .about {
@@ -879,10 +892,6 @@
       display: block;
       max-height: calc(100vh - 100px);
     }
-  }
-
-  .divider {
-    display: block;
   }
 
   .about {
