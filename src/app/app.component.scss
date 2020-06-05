@@ -846,6 +846,15 @@
   }
 }
 
+@media (min-width: 375px) {
+  .banner {
+  
+    .profile {
+      max-height: 33rem;
+    }
+  }
+}
+
 @media (min-width: 425px) {
   .banner {
   
