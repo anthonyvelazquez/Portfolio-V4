@@ -414,7 +414,7 @@
   .location-list {
     max-width: calc(100vw - 2.5rem);
     display: flex;
-    overflow-x: scroll;
+    overflow-x: auto;
     margin-bottom: 2rem;
   }
 
