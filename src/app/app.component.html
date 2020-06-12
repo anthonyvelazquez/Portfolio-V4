@@ -25,9 +25,9 @@
               <a class="item-link" href="#contact"><i class="fas fa-fw fa-phone"></i>Contact</a>
             </li>
           </ol>
-          <button class="button button--blue-outline resume-button">
+          <a href="../assets/Resume.pdf" target="_blank" class="button button--blue-outline resume-button">
             Resume
-          </button>
+          </a>
         </div>
         <div class="mobile-view">
           <button (click)="toggleMenu()"><i #toggle class="fas fa-fw fa-2x" [ngClass]="{'fa-bars': !displayMobileDropdown, 'fa-times': displayMobileDropdown}"></i></button>
@@ -49,7 +49,7 @@
       <a class="item-link" (click)="scrollToSection('contact')"><i class="fas fa-fw fa-phone"></i>Contact</a>
     </li>
     <li class="item">
-      <a class="item-link" href="" target="_blank"><i class="fas fa-fw fa-file"></i>Resume</a>
+      <a class="item-link" href="../assets/Resume.pdf" target="_blank"><i class="fas fa-fw fa-file"></i>Resume</a>
     </li>
   </ol>
   <div class="social-container">
