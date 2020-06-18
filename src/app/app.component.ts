@@ -79,7 +79,7 @@ export class AppComponent implements OnInit {
       description: 'Barebone proof of concept for a hotel website. ',
       github: 'https://github.com/anthonyvelazquez/Trillo',
       website: 'https://avelazquez-trillo.netlify.app/',
-      image: 'https://via.placeholder.com/1920x1080',
+      image: 'https://via.placeholder.com/1920x1080?text=Preview+Coming+Soon',
       languages: ['Angular 2+', 'HTML5', 'SCSS'],
       viewable: true
     });
@@ -88,7 +88,7 @@ export class AppComponent implements OnInit {
       description: 'Barebone proof of concept for a realtor website. ',
       github: 'https://github.com/anthonyvelazquez/Nexter',
       website: 'https://avelazquez-nexter.netlify.app/',
-      image: 'https://via.placeholder.com/1920x1080',
+      image: 'https://via.placeholder.com/1920x1080?text=Preview+Coming+Soon',
       languages: ['HTML5', 'CSS'],
       viewable: true
     });
@@ -97,7 +97,7 @@ export class AppComponent implements OnInit {
       description: 'Barebone proof of concept for a outdoor website. ',
       github: 'https://github.com/anthonyvelazquez/Natour',
       website: 'https://avelazquez-natour.netlify.app/',
-      image: 'https://via.placeholder.com/1920x1080',
+      image: 'https://via.placeholder.com/1920x1080?text=Preview+Coming+Soon',
       languages: ['Angular 2+', 'HTML5', 'SCSS'],
       viewable: true
     });
