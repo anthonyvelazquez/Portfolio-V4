@@ -79,7 +79,7 @@ export class AppComponent implements OnInit {
       description: 'Barebone proof of concept for a hotel website. ',
       github: 'https://github.com/anthonyvelazquez/Trillo',
       website: 'https://avelazquez-trillo.netlify.app/',
-      image: 'https://via.placeholder.com/1920x1080?text=Preview+Coming+Soon',
+      image: '../assets/trillo.jpg',
       languages: ['Angular 2+', 'HTML5', 'SCSS'],
       viewable: true
     });
@@ -88,7 +88,7 @@ export class AppComponent implements OnInit {
       description: 'Barebone proof of concept for a realtor website. ',
       github: 'https://github.com/anthonyvelazquez/Nexter',
       website: 'https://avelazquez-nexter.netlify.app/',
-      image: 'https://via.placeholder.com/1920x1080?text=Preview+Coming+Soon',
+      image: '../assets/nexter.jpg',
       languages: ['HTML5', 'CSS'],
       viewable: true
     });
@@ -97,7 +97,7 @@ export class AppComponent implements OnInit {
       description: 'Barebone proof of concept for a outdoor website. ',
       github: 'https://github.com/anthonyvelazquez/Natour',
       website: 'https://avelazquez-natour.netlify.app/',
-      image: 'https://via.placeholder.com/1920x1080?text=Preview+Coming+Soon',
+      image: '../assets/natour.jpg',
       languages: ['Angular 2+', 'HTML5', 'SCSS'],
       viewable: true
     });
@@ -172,10 +172,18 @@ export class AppComponent implements OnInit {
   importJobs(): void {
     this.jobList.push({
       active: true,
-      title: 'Software Engineer',
+      title: 'Software Configuration Engineer',
+      company: 'Sapphire Digital',
+      website: 'https://getsapphire.com/',
+      time: 'Aug 2020 - Present',
+      details: ["Modify YAML configuration files to meet the needs of healthcare insurance companies", "Assist with the discovery, planning and implementation of configurations for new healthcare clients", "Meet with clients and internal managers to discuss ways to improve current configuration workflow", "Assist with Angular troubleshooting for client facing UI or Ruby troubleshooting for backend systems"]
+    });
+    this.jobList.push({
+      active: false,
+      title: 'Full Stack Developer',
       company: 'Common Cents Distributors',
       website: 'https://www.commoncentsdistributors.com',
-      time: 'May 2018 - Present',
+      time: 'May 2018 - Aug 2020',
       details: ["Converted the company's business structure from Google Sheets into a robust and user friendly web application using Angular 2+.",'Designed and implemented database architecture for said web app using Python, Django, MySQL and Amazon Services such as RDS, SQS, S3 Buckets and Lambda.', "Setup a proper development cycle for our new development team through the use of Github, Trello and Monday", "Took over DevOps management by creating an automated testing and deployment pipeline through the use of Jenkins and Docker", "Mentored 2 developers in industry standard development cycle as well as design and development of a SaaS version of the previously created web application"]
     });
     this.jobList.push({
@@ -183,7 +191,7 @@ export class AppComponent implements OnInit {
       title: 'Full Stack Developer - Freelance',
       company: 'AmazonLit',
       website: 'https://www.amazonlit.com',
-      time: 'Dec 2019 - Present',
+      time: 'Dec 2019 - Aug 2020',
       details: ["Created website with Angular 9 based on client's design documents.", 'Used Python, Django and MySQL for user storage.', 'Integrated website with Intercom and Calendly.', 'Integrated Pixel from Facebook Ads Manager for user tracking.']
     });
     this.jobList.push({
@@ -196,7 +204,7 @@ export class AppComponent implements OnInit {
     });
     this.jobList.push({
       active: false,
-      title: 'Web Developer Intern',
+      title: 'Full Stack Developer',
       company: 'System On Grid',
       website: 'https://systemongrid.com/',
       time: 'May 2017 - May 2018',
